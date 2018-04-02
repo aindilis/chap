@@ -1,0 +1,199 @@
+Center
+Square
+
+two armies
+
+battlefield, board
+
+white_square(Square)
+black_square(Square)
+corner_square(Square)
+center_square(Square)
+
+King, Queen Rook Bishop Knight Pawn
+
+Generals
+
+players
+
+white
+
+black
+
+capturing_move(Move)
+
+winning_side(Side,Game)
+losing_side(Side,Game)
+
+laws of movement
+
+initial placement
+
+stands next to
+
+pieces (not pawns)
+
+line of squares
+
+rank
+
+file
+
+diagonals (are always the same color)
+
+descriptive notation
+
+algebraic notation
+
+intersection (of file and rank)
+
+men (pawns + pieces)
+
+Chessmen
+
+Man stands on Square
+
+moves
+
+combination
+
+obstructed path
+
+straight line
+
+man of the same color
+
+hostile man
+
+occupy
+
+could move to
+
+may not go
+
+may not go to a square that a man of his own stands there, not allowed to jump
+
+jump
+
+stand on a file, rank or diagonal
+
+if there is a hostile man
+
+squares accessible to him
+
+confined
+
+has access to
+
+stronger man
+
+path is clear
+
+squares to which a man can move
+
+in play
+
+powerful
+
+may only move one square at a time
+
+opposing man
+
+enemy
+
+adversary
+
+may capture
+
+be captured
+
+squares to which he may go
+
+being in range
+
+knight's move
+
+# consider things like algebra's of knight moves
+
+move before
+
+its range
+
+if a piece stood on
+
+en passant
+
+exchange
+
+queening
+
+mobility
+
+range of movement
+
+castling
+
+passed
+
+leap
+
+castling king side
+
+castling queen side
+
+previously moved
+
+may
+
+attack
+
+in case
+
+recapture
+
+is unprotected
+
+losing anything in the exchange
+
+losing_exchange(Exchange,Position)
+
+check(Side,Position) : isattacked(opposing king)
+
+checkmate(Side,Position) : (not exists move (get_out_of_check(move, opposing king)))
+
+liberty
+
+get_out_of_check
+
+PositionOfGameAtMove(Position,Game,Move)
+
+attacking(Piece1,Piece2,Position)
+
+interposes(Piece1,Piece2,Piece3,Position,Move)
+
+move out of line of attack
+
+line of attack
+
+give check
+
+give check with
+
+answer
+
+moves at disposal
+
+very_unwise
+
+situation
+
+protect(Piece1, Square, Position)
+defend(Piece1, Square, Position)
+
+threatens(Action, Situation, Position)
+
+cannot_move_to(Piece,Square,Position)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+insufficient_material_to_mate(Side)
