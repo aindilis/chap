@@ -1,0 +1,2 @@
+%% sensei's wiki
+% attari()

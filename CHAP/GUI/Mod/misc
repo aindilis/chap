@@ -1,0 +1,54 @@
+sub DragSelectedPiece {
+  my ($self,@items) = @_;
+
+  # figure out which piece and make that piece bound more or less to
+  # the position of the mouse
+
+  my $res1 = $self->GetLocation;
+  if ($res1->{Success}) {
+    my $res2 = $self->ConvertCoordinatesToNotation
+      (
+       $res1->{Results}
+      );
+    if ($res2->{Success}) {
+      # now we now the coordinates, so we should take the image located there, and make it follow the mouse
+      print Dumper($res2);
+
+      # how do we take control of the item at this location...
+
+
+    }
+  }
+  while (! defined $self->InitiatePlacement) {
+    my $res = $self->GetLocation();
+    # eventually
+    if ($res->{Success}) {
+      $self->MoveImageTo
+	(
+	 Location => $res->{Result},
+	);
+    } else {
+      die "no geometry\n";
+    }
+    # have to listen here for one round little bit
+
+  }
+  # now we can suggest the new location, and then redraw
+  if ($self->InitiatePlacement->{Success}) {
+    my $res3 = $self->ConvertCoordinatesToNotation
+      (
+       $self->InitiatePlacement->{Results}
+      );
+    if ($res3->{Success}) {
+      # now we now the coordinates, so we should take the image located there, and make it follow the mouse
+      print Dumper($res3);
+
+      # so we have these, now we want to suggest to the AI to move it there
+
+      # query if it is possible to move it there, if not, get the reason
+
+
+    }
+  }
+  # $self->Refresh;
+}

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xboard -ics -icshost freechess.org -icslogon ~/.icsrc
